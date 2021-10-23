@@ -25,7 +25,7 @@
     };
 
     RemoteDataStore.prototype.getAll = async function () {
-        let query = await firebase.firestore().collection('coffeeorders');
+        let query = await firebase.firestore().collection('coffeeorders').get();
         
         console.log(`query: ${query.docs}`);
 
